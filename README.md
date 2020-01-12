@@ -15,10 +15,14 @@
 
 `6. With the command line go inside the ./server folder and run :`   **npm install**
 
-`7. After the install is completed, run: ` **npm run start-server**
+`7. After the install is completed, run:` **npm run start-server**
 
-`8. With ANOTHER command line go inside the ./client folder and run :`   **npm install**
+`8. If you are on a MacOS you can run (this will delete node_modules and package-lock.json):` **npm run install:clean**
 
-`9. After the install is completed, run: ` **npm run start-client**
+`9. With ANOTHER command line go inside the ./client folder and run :`   **npm install**
 
-`10. Job done!`
+`10. After the install is completed, run:` **npm run start-client**
+
+`11. If you are on a MacOS you can run (this will delete node_modules and package-lock.json):` **npm run install:clean**
+
+`12. Job done!`
