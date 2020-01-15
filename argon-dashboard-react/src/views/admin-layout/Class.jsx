@@ -44,13 +44,13 @@ class Teacher extends React.Component {
             <Col md="6">
               <Card className="shadow">
                 <CardHeader className="border-0">
-                  <h3 className="mb-0">Chemistry is tought in these classes</h3>
+                  <h3 className="mb-0">8th students</h3>
                 </CardHeader>
                 <Table className="align-items-center table-flush" responsive>
                   <thead className="thead-light">
                     <tr>
-                      <th scope="col">Class</th>
-                      <th scope="col">Teacher</th>
+                      <th scope="col">#</th>
+                      <th scope="col">Student</th>
                       <th scope="col" className="text-right grades-actions">
                         Actions
                       </th>
@@ -58,36 +58,27 @@ class Teacher extends React.Component {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>8th grade</td>
+                      <td>1</td>
                       <td>Johan Fullman</td>
                       <td className="text-right">
-                        <Button color="info" size="sm">
-                          Change
-                        </Button>
                         <Button color="danger" size="sm">
                           Delete
                         </Button>
                       </td>
                     </tr>
                     <tr>
-                      <td>9th grade</td>
-                      <td>Johan Fullman</td>
+                      <td>2</td>
+                      <td>Jane Dane</td>
                       <td className="text-right">
-                        <Button color="info" size="sm">
-                          Change
-                        </Button>
                         <Button color="danger" size="sm">
                           Delete
                         </Button>
                       </td>
                     </tr>
                     <tr>
-                      <td>10th grade</td>
-                      <td>Johan Fullman</td>
+                      <td>2</td>
+                      <td>Jon Doe</td>
                       <td className="text-right">
-                        <Button color="info" size="sm">
-                          Change
-                        </Button>
                         <Button color="danger" size="sm">
                           Delete
                         </Button>
@@ -101,14 +92,24 @@ class Teacher extends React.Component {
                       <FormGroup>
                         <Input
                           className="form-control-alternative"
-                          id="input-subject"
-                          placeholder="Class"
+                          id="input-first-name"
+                          placeholder="First Name"
                           type="text"
                         />
                       </FormGroup>
                     </Col>
                     <Col md="6">
-                      <Button color="primary">Add new Class</Button>
+                      <FormGroup>
+                        <Input
+                          className="form-control-alternative"
+                          id="input-last-name"
+                          placeholder="Last Name"
+                          type="text"
+                        />
+                      </FormGroup>
+                    </Col>
+                    <Col md="12">
+                      <Button color="primary">Add new Student</Button>
                     </Col>
                   </Row>
                 </CardBody>

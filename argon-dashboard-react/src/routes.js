@@ -28,6 +28,7 @@ import AdminClasses from "views/admin-layout/Classes.jsx";
 import AdminTeacher from "views/admin-layout/Teacher.jsx";
 import AdminStudent from "views/admin-layout/Student.jsx";
 import AdminSubject from "views/admin-layout/Subject.jsx";
+import AdminClass from "views/admin-layout/Class.jsx";
 // teacher layout
 import TeacherProfile from "views/teacher-layout/Profile.jsx";
 import TeacherSubjects from "views/teacher-layout/Subjects.jsx";
@@ -116,6 +117,13 @@ var routes = [
     name: "Subject",
     icon: "ni ni-ungroup text-default",
     component: AdminSubject,
+    layout: "/admin"
+  },
+  {
+    path: "/class",
+    name: "Class",
+    icon: "ni ni-building text-default",
+    component: AdminClass,
     layout: "/admin"
   },
   // teacher layout
