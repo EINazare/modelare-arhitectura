@@ -16,51 +16,42 @@
 
 */
 import React from "react";
+
 // reactstrap components
 import {
-  Alert,
   Button,
   Card,
   CardHeader,
-  Table,
+  CardBody,
+  FormGroup,
+  Form,
+  Input,
   Container,
   Row,
-  Col
+  Col,
+  Table
 } from "reactstrap";
 // core components
 import Header from "components/Headers/Header.jsx";
 
-class Grades extends React.Component {
+class Teacher extends React.Component {
   render() {
     return (
       <>
         <Header />
         {/* Page content */}
         <Container className="mt--7" fluid>
-          <Row className="mt-5">
-            <Col>
+          <Row>
+            <Col md="6">
               <Card className="shadow">
                 <CardHeader className="border-0">
-                  <h3 className="mb-0">
-                    Here are the Grades of Jeniffer Dusting on the Physics
-                    course from 11th Grade
-                  </h3>
-                  <h6 className="text-muted mb-0">
-                    (Soon) check the history of Jeniffer Dusting's Physics
-                    grades
-                  </h6>
-                  <br />
-                  <Alert color="default">
-                    <strong>Note!</strong> The Grades you see, are the final
-                    ones after you've last modified them.
-                  </Alert>
+                  <h3 className="mb-0">Chemistry is tought in these classes</h3>
                 </CardHeader>
                 <Table className="align-items-center table-flush" responsive>
                   <thead className="thead-light">
                     <tr>
-                      <th scope="col">Score</th>
-                      <th scope="col">Date added</th>
-                      <th scope="col">Date modified</th>
+                      <th scope="col">Class</th>
+                      <th scope="col">Teacher</th>
                       <th scope="col" className="text-right grades-actions">
                         Actions
                       </th>
@@ -68,12 +59,8 @@ class Grades extends React.Component {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>You gave an 8</td>
-                      <td>on {new Date().toLocaleDateString()}</td>
-                      <td>
-                        and it was last modified on{" "}
-                        {new Date().toLocaleDateString()}
-                      </td>
+                      <td>8th grade</td>
+                    <td>Johan Fullman</td>
                       <td className="text-right">
                         <Button color="info" size="sm">
                           Change
@@ -84,12 +71,8 @@ class Grades extends React.Component {
                       </td>
                     </tr>
                     <tr>
-                      <td>You gave an 9</td>
-                      <td>on {new Date().toLocaleDateString()}</td>
-                      <td>
-                        and it was last modified on{" "}
-                        {new Date().toLocaleDateString()}
-                      </td>
+                      <td>9th grade</td>
+                    <td>Johan Fullman</td>
                       <td className="text-right">
                         <Button color="info" size="sm">
                           Change
@@ -100,12 +83,8 @@ class Grades extends React.Component {
                       </td>
                     </tr>
                     <tr>
-                      <td>You gave an 10</td>
-                      <td>on {new Date().toLocaleDateString()}</td>
-                      <td>
-                        and it was last modified on{" "}
-                        {new Date().toLocaleDateString()}
-                      </td>
+                      <td>10th grade</td>
+                    <td>Johan Fullman</td>
                       <td className="text-right">
                         <Button color="info" size="sm">
                           Change
@@ -114,29 +93,26 @@ class Grades extends React.Component {
                           Delete
                         </Button>
                       </td>
-                    </tr>
-                    <tr>
-                      <td>You gave an 9</td>
-                      <td>on {new Date().toLocaleDateString()}</td>
-                      <td>
-                        and it was last modified on{" "}
-                        {new Date().toLocaleDateString()}
-                      </td>
-                      <td className="text-right">
-                        <Button color="info" size="sm">
-                          Change
-                        </Button>
-                        <Button color="danger" size="sm">
-                          Delete
-                        </Button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>The current average is 9</td>
-                      <td colSpan="3"></td>
                     </tr>
                   </tbody>
                 </Table>
+                <CardBody className="bg-secondary">
+                  <Row>
+                    <Col md="6">
+                      <FormGroup>
+                        <Input
+                          className="form-control-alternative"
+                          id="input-subject"
+                          placeholder="Class"
+                          type="text"
+                        />
+                      </FormGroup>
+                    </Col>
+                    <Col md="6">
+                      <Button color="primary">Add new Class</Button>
+                    </Col>
+                  </Row>
+                </CardBody>
               </Card>
             </Col>
           </Row>
@@ -146,4 +122,4 @@ class Grades extends React.Component {
   }
 }
 
-export default Grades;
+export default Teacher;

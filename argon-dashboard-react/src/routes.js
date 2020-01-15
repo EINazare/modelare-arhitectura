@@ -21,11 +21,13 @@ import AdminLogin from "views/auth-layout/AdminLogin.jsx";
 import TeacherLogin from "views/auth-layout/TeacherLogin.jsx";
 import StudentLogin from "views/auth-layout/StudentLogin.jsx";
 // admin layout
-import Index from "views/Index.jsx";
-import Profile from "views/examples/Profile.jsx";
-import Maps from "views/examples/Maps.jsx";
-import Tables from "views/examples/Tables.jsx";
-import Icons from "views/examples/Icons.jsx";
+import AdminTeachers from "views/admin-layout/Teachers.jsx";
+import AdminStudents from "views/admin-layout/Students.jsx";
+import AdminSubjects from "views/admin-layout/Subjects.jsx";
+import AdminClasses from "views/admin-layout/Classes.jsx";
+import AdminTeacher from "views/admin-layout/Teacher.jsx";
+import AdminStudent from "views/admin-layout/Student.jsx";
+import AdminSubject from "views/admin-layout/Subject.jsx";
 // teacher layout
 import TeacherProfile from "views/teacher-layout/Profile.jsx";
 import TeacherSubjects from "views/teacher-layout/Subjects.jsx";
@@ -68,38 +70,52 @@ var routes = [
   },
   // admin layout
   {
-    path: "/index",
-    name: "Dashboard",
-    icon: "ni ni-tv-2 text-primary",
-    component: Index,
+    path: "/teachers",
+    name: "Teachers",
+    icon: "ni ni-paper-diploma text-warning",
+    component: AdminTeachers,
     layout: "/admin"
   },
   {
-    path: "/icons",
-    name: "Icons",
-    icon: "ni ni-planet text-blue",
-    component: Icons,
+    path: "/students",
+    name: "Students",
+    icon: "ni ni-hat-3 text-primary",
+    component: AdminStudents,
     layout: "/admin"
   },
   {
-    path: "/maps",
-    name: "Maps",
-    icon: "ni ni-pin-3 text-orange",
-    component: Maps,
+    path: "/subjects",
+    name: "Subjects",
+    icon: "ni ni-ungroup text-info",
+    component: AdminSubjects,
     layout: "/admin"
   },
   {
-    path: "/user-profile",
-    name: "User Profile",
-    icon: "ni ni-single-02 text-yellow",
-    component: Profile,
+    path: "/classes",
+    name: "Classes",
+    icon: "ni ni-building text-success",
+    component: AdminClasses,
     layout: "/admin"
   },
   {
-    path: "/tables",
-    name: "Tables",
-    icon: "ni ni-bullet-list-67 text-red",
-    component: Tables,
+    path: "/teacher",
+    name: "Teacher",
+    icon: "ni ni-paper-diploma text-default",
+    component: AdminTeacher,
+    layout: "/admin"
+  },
+  {
+    path: "/student",
+    name: "Student",
+    icon: "ni ni-hat-3 text-default",
+    component: AdminStudent,
+    layout: "/admin"
+  },
+  {
+    path: "/subject",
+    name: "Subject",
+    icon: "ni ni-ungroup text-default",
+    component: AdminSubject,
     layout: "/admin"
   },
   // teacher layout
