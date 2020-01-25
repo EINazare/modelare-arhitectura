@@ -18,10 +18,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // reactstrap components
-import {
-  Navbar,
-  Container,
-} from "reactstrap";
+import { Navbar, Container } from "reactstrap";
 
 class AdminNavbar extends React.Component {
   render() {

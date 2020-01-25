@@ -28,19 +28,25 @@ class App extends React.Component {
     const { alert } = this.props;
     return (
       <>
-            {alert.message && (
-              <div className={`alert ${alert.type}`}>{alert.message}</div>
-            )}
-            <BrowserRouter>
-              <Switch>
-                <Route path="/admin" render={props => <AdminLayout {...props} />} />
-                <Route path="/teacher" render={props => <TeacherLayout {...props} />} />
-                <Route path="/student" render={props => <StudentLayout {...props} />} />
-                <Route path="/auth" render={props => <AuthLayout {...props} />} />
-                <Redirect from="/" to="/auth" />
-              </Switch>
-            </BrowserRouter>
-          </>
+        {alert.message && (
+          <div className={`alert ${alert.type}`}>{alert.message}</div>
+        )}
+        <BrowserRouter>
+          <Switch>
+            <Route path="/admin" render={props => <AdminLayout {...props} />} />
+            <Route
+              path="/teacher"
+              render={props => <TeacherLayout {...props} />}
+            />
+            <Route
+              path="/student"
+              render={props => <StudentLayout {...props} />}
+            />
+            <Route path="/auth" render={props => <AuthLayout {...props} />} />
+            <Redirect from="/" to="/auth" />
+          </Switch>
+        </BrowserRouter>
+      </>
     );
   }
 }
