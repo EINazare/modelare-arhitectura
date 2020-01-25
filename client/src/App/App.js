@@ -9,6 +9,11 @@ import { HomePage } from "../HomePage";
 import { LoginPage } from "../LoginPage";
 import { RegisterPage } from "../RegisterPage";
 
+import AdminLayout from "layouts/Admin";
+import TeacherLayout from "layouts/Teacher";
+import StudentLayout from "layouts/Student";
+import AuthLayout from "layouts/Auth";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -30,10 +35,11 @@ class App extends React.Component {
             )}
             <Router history={history}>
               <Switch>
-                <PrivateRoute exact path="/" component={HomePage} />
-                <Route path="/login" component={LoginPage} />
-                <Route path="/register" component={RegisterPage} />
-                <Redirect from="*" to="/" />
+                <PrivateRoute exact  path="/admin" render={props => <AdminLayout {...props} />} />
+                <PrivateRoute exact  path="/teacher" render={props => <TeacherLayout {...props} />} />
+                <PrivateRoute exact  path="/student" render={props => <StudentLayout {...props} />} />
+                <PrivateRoute exact  path="/auth" render={props => <AuthLayout {...props} />} />
+              <Redirect from="*" to="/auth" />
               </Switch>
             </Router>
           </div>
