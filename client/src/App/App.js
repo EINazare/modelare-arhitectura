@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { history } from "../_helpers";
@@ -27,24 +27,20 @@ class App extends React.Component {
   render() {
     const { alert } = this.props;
     return (
-      <div className="jumbotron">
-        <div className="container">
-          <div className="col-sm-8 col-sm-offset-2">
+      <>
             {alert.message && (
               <div className={`alert ${alert.type}`}>{alert.message}</div>
             )}
-            <Router history={history}>
+            <BrowserRouter>
               <Switch>
-                <PrivateRoute exact  path="/admin" render={props => <AdminLayout {...props} />} />
-                <PrivateRoute exact  path="/teacher" render={props => <TeacherLayout {...props} />} />
-                <PrivateRoute exact  path="/student" render={props => <StudentLayout {...props} />} />
-                <PrivateRoute exact  path="/auth" render={props => <AuthLayout {...props} />} />
-              <Redirect from="*" to="/auth" />
+                <Route path="/admin" render={props => <AdminLayout {...props} />} />
+                <Route path="/teacher" render={props => <TeacherLayout {...props} />} />
+                <Route path="/student" render={props => <StudentLayout {...props} />} />
+                <Route path="/auth" render={props => <AuthLayout {...props} />} />
+                <Redirect from="/" to="/auth" />
               </Switch>
-            </Router>
-          </div>
-        </div>
-      </div>
+            </BrowserRouter>
+          </>
     );
   }
 }
