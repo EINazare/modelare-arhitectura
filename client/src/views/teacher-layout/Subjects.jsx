@@ -20,7 +20,7 @@ import React from "react";
 // reactstrap components
 import { Card, CardHeader, Table, Container, Row } from "reactstrap";
 // core components
-import Header from "components/Headers/Header.jsx";
+import Header from "components/Headers/Header.js";
 
 class Subjects extends React.Component {
   render() {

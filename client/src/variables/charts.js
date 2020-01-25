@@ -302,7 +302,7 @@ function parseOptions(parent, options) {
   }
 }
 
-// Example 1 of Chart inside src/views/Index.jsx (Sales value - Card)
+// Example 1 of Chart inside src/views/Index.js (Sales value - Card)
 let chartExample1 = {
   options: {
     scales: {
@@ -363,7 +363,7 @@ let chartExample1 = {
   }
 };
 
-// Example 2 of Chart inside src/views/Index.jsx (Total orders - Card)
+// Example 2 of Chart inside src/views/Index.js (Total orders - Card)
 let chartExample2 = {
   options: {
     scales: {
@@ -407,8 +407,8 @@ let chartExample2 = {
 };
 
 module.exports = {
-  chartOptions, // used inside src/views/Index.jsx
-  parseOptions, // used inside src/views/Index.jsx
-  chartExample1, // used inside src/views/Index.jsx
-  chartExample2 // used inside src/views/Index.jsx
+  chartOptions, // used inside src/views/Index.js
+  parseOptions, // used inside src/views/Index.js
+  chartExample1, // used inside src/views/Index.js
+  chartExample2 // used inside src/views/Index.js
 };

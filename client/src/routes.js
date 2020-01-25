@@ -16,28 +16,28 @@
 
 */
 // auth layout
-import Login from "views/auth-layout/Login.jsx";
-import AdminLogin from "views/auth-layout/AdminLogin.jsx";
-import TeacherLogin from "views/auth-layout/TeacherLogin.jsx";
-import StudentLogin from "views/auth-layout/StudentLogin.jsx";
+import Login from "views/auth-layout/Login.js";
+import AdminLogin from "views/auth-layout/AdminLogin.js";
+import TeacherLogin from "views/auth-layout/TeacherLogin.js";
+import StudentLogin from "views/auth-layout/StudentLogin.js";
 // admin layout
-import AdminTeachers from "views/admin-layout/Teachers.jsx";
-import AdminStudents from "views/admin-layout/Students.jsx";
-import AdminSubjects from "views/admin-layout/Subjects.jsx";
-import AdminClasses from "views/admin-layout/Classes.jsx";
-import AdminTeacher from "views/admin-layout/Teacher.jsx";
-import AdminStudent from "views/admin-layout/Student.jsx";
-import AdminSubject from "views/admin-layout/Subject.jsx";
-import AdminClass from "views/admin-layout/Class.jsx";
+import AdminTeachers from "views/admin-layout/Teachers.js";
+import AdminStudents from "views/admin-layout/Students.js";
+import AdminSubjects from "views/admin-layout/Subjects.js";
+import AdminClasses from "views/admin-layout/Classes.js";
+import AdminTeacher from "views/admin-layout/Teacher.js";
+import AdminStudent from "views/admin-layout/Student.js";
+import AdminSubject from "views/admin-layout/Subject.js";
+import AdminClass from "views/admin-layout/Class.js";
 // teacher layout
-import TeacherProfile from "views/teacher-layout/Profile.jsx";
-import TeacherSubjects from "views/teacher-layout/Subjects.jsx";
-import TeacherStudents from "views/teacher-layout/Students.jsx";
-import TeacherGrades from "views/teacher-layout/Grades.jsx";
+import TeacherProfile from "views/teacher-layout/Profile.js";
+import TeacherSubjects from "views/teacher-layout/Subjects.js";
+import TeacherStudents from "views/teacher-layout/Students.js";
+import TeacherGrades from "views/teacher-layout/Grades.js";
 // student layout
-import StudentProfile from "views/student-layout/Profile.jsx";
-import StudentSubjects from "views/student-layout/Subjects.jsx";
-import StudentGrades from "views/student-layout/Grades.jsx";
+import StudentProfile from "views/student-layout/Profile.js";
+import StudentSubjects from "views/student-layout/Subjects.js";
+import StudentGrades from "views/student-layout/Grades.js";
 
 var routes = [
   // auth layout

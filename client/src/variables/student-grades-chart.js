@@ -300,7 +300,7 @@ function parseOptions(parent, options) {
   }
 }
 
-// Example 1 of Chart inside src/views/student-layout/Grades.jsx (History - Card)
+// Example 1 of Chart inside src/views/student-layout/Grades.js (History - Card)
 let chartData = {
   options: {
     scales: {
@@ -358,7 +358,7 @@ let chartData = {
 };
 
 module.exports = {
-  chartOptions, // used inside src/views/student-layout/Grades.jsx
-  parseOptions, // used inside src/views/student-layout/Grades.jsx
-  chartData // used inside src/views/student-layout/Grades.jsx
+  chartOptions, // used inside src/views/student-layout/Grades.js
+  parseOptions, // used inside src/views/student-layout/Grades.js
+  chartData // used inside src/views/student-layout/Grades.js
 };

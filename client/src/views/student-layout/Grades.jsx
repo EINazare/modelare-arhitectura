@@ -32,12 +32,12 @@ import {
   Col
 } from "reactstrap";
 // core components
-import Header from "components/Headers/Header.jsx";
+import Header from "components/Headers/Header.js";
 import {
   chartOptions,
   parseOptions,
   chartData
-} from "variables/student-grades-chart.jsx";
+} from "variables/student-grades-chart.js";
 
 class Grades extends React.Component {
   componentWillMount() {

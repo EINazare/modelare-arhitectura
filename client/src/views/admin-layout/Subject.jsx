@@ -31,7 +31,7 @@ import {
   Table
 } from "reactstrap";
 // core components
-import Header from "components/Headers/Header.jsx";
+import Header from "components/Headers/Header.js";
 
 class Teacher extends React.Component {
   render() {

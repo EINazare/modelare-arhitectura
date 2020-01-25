@@ -31,7 +31,7 @@ import {
   Col
 } from "reactstrap";
 // core components
-import StudentHeader from "components/Headers/StudentHeader.jsx";
+import StudentHeader from "components/Headers/StudentHeader.js";
 
 class Profile extends React.Component {
   render() {

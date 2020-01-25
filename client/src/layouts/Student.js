@@ -19,8 +19,8 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 // reactstrap components
 // core components
-import AdminNavbar from "components/Navbars/AdminNavbar.jsx";
-import Sidebar from "components/Sidebar/Sidebar.jsx";
+import AdminNavbar from "components/Navbars/AdminNavbar.js";
+import Sidebar from "components/Sidebar/Sidebar.js";
 
 import routes from "routes.js";
 
