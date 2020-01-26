@@ -6,6 +6,7 @@ export const userService = {
   logout,
   register,
   getAll,
+  getAllTeachers,
   getById,
   update,
   delete: _delete
@@ -40,6 +41,15 @@ function getAll() {
   };
 
   return fetch(`${config.apiUrl}/users`, requestOptions).then(handleResponse);
+}
+
+function getAllTeachers() {
+  const requestOptions = {
+    method: "GET",
+    headers: authHeader()
+  };
+
+  return fetch(`${config.apiUrl}/users/teachers`, requestOptions).then(handleResponse);
 }
 
 function getById(id) {
