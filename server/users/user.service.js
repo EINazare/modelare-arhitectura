@@ -7,6 +7,7 @@ const User = db.User;
 module.exports = {
   authenticate,
   getAll,
+  getAllTeachers,
   getById,
   create,
   update,
@@ -27,6 +28,10 @@ async function authenticate({ email, password }) {
 
 async function getAll() {
   return await User.find().select("-hash");
+}
+
+async function getAllTeachers() {
+  return await User.find({role: "teacher"});
 }
 
 async function getById(id) {
