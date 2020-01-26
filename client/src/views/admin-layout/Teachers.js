@@ -25,7 +25,6 @@ class Teachers extends React.Component {
   }
   render() {
     const { users } = this.props;
-    console.log(users);
     return (
       <>
         <Header />
