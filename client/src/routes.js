@@ -17,9 +17,6 @@
 */
 // auth layout
 import Login from "views/auth-layout/Login.js";
-import AdminLogin from "views/auth-layout/AdminLogin.js";
-import TeacherLogin from "views/auth-layout/TeacherLogin.js";
-import StudentLogin from "views/auth-layout/StudentLogin.js";
 // admin layout
 import AdminTeachers from "views/admin-layout/Teachers.js";
 import AdminStudents from "views/admin-layout/Students.js";
@@ -46,27 +43,6 @@ var routes = [
     name: "Login",
     icon: "ni ni-key-25 text-info",
     component: Login,
-    layout: "/auth"
-  },
-  {
-    path: "/admin-login",
-    name: "Register",
-    icon: "ni ni-circle-08 text-pink",
-    component: AdminLogin,
-    layout: "/auth"
-  },
-  {
-    path: "/teacher-login",
-    name: "Register",
-    icon: "ni ni-circle-08 text-pink",
-    component: TeacherLogin,
-    layout: "/auth"
-  },
-  {
-    path: "/student-login",
-    name: "Register",
-    icon: "ni ni-circle-08 text-pink",
-    component: StudentLogin,
     layout: "/auth"
   },
   // admin layout
