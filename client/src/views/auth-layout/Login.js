@@ -49,7 +49,6 @@ class Login extends React.Component {
     this.setState({ submitted: true });
     const { email, password } = this.state;
     if (email && password) {
-      console.log("hey");
       this.props.login(email, password);
     }
   }
