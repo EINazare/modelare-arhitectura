@@ -18,7 +18,22 @@ function login(email, password) {
     userService.login(email, password).then(
       user => {
         dispatch(success(user));
-        history.push("/");
+        console.log("==============");
+        console.log(user);
+        console.log("==============");
+        switch (user.role) {
+          case "admin":
+            history.push("/admin/teachers");
+            break;
+          case "teacher":
+            history.push("/teacher/profile");
+            break;
+          case "student":
+            history.push("/student/profile");
+            break;
+          default:
+            break;
+        }
       },
       error => {
         dispatch(failure(error.toString()));
