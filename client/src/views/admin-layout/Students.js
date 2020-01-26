@@ -27,6 +27,7 @@ import {
   Container,
   Row,
   Col,
+  Form,
   FormGroup,
   Input
 } from "reactstrap";
@@ -88,6 +89,7 @@ class Subjects extends React.Component {
                   </tbody>
                 </Table>
                 <CardBody className="bg-secondary">
+                  <Form>
                   <Row>
                     <Col md="6">
                       <FormGroup>
@@ -116,6 +118,7 @@ class Subjects extends React.Component {
                           id="input-email"
                           placeholder="Email"
                           type="email"
+                          autoComplete="new-email"
                         />
                       </FormGroup>
                     </Col>
@@ -126,6 +129,7 @@ class Subjects extends React.Component {
                           id="input-password"
                           placeholder="Password"
                           type="password"
+                          autoComplete="new-password"
                         />
                       </FormGroup>
                     </Col>
@@ -133,6 +137,7 @@ class Subjects extends React.Component {
                       <Button color="default">Add new student</Button>
                     </Col>
                   </Row>
+                  </Form>
                 </CardBody>
               </Card>
             </div>
