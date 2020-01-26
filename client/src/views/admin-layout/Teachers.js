@@ -6,7 +6,6 @@ import {
   Card,
   CardHeader,
   CardBody,
-  Table,
   Container,
   Row,
   Col,
@@ -16,6 +15,7 @@ import {
 } from "reactstrap";
 // core components
 import Header from "components/Headers/Header.js";
+import Table from "components/Tables/Teachers.js";
 
 import { userActions } from "_actions";
 
@@ -38,44 +38,7 @@ class Teachers extends React.Component {
                     Here are all of the Teachers from your School.
                   </h3>
                 </CardHeader>
-                <Table className="align-items-center table-flush" responsive>
-                  <thead className="thead-light">
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Teacher</th>
-                      <th scope="col">No. Classes</th>
-                      <th scope="col" className="text-right">
-                        Actions
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Jone Doe</td>
-                      <td>teaches 4 classes</td>
-                      <td className="text-right">
-                        <Button color="default">Edit Teacher</Button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Jane Dane</td>
-                      <td>teaches 3 classes</td>
-                      <td className="text-right">
-                        <Button color="default">Edit Teacher</Button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Hans Fullman</td>
-                      <td>teaches 3 classes</td>
-                      <td className="text-right">
-                        <Button color="default">Edit Teacher</Button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </Table>
+                <Table teachers={users.items} />
                 <CardBody className="bg-secondary">
                   <Form>
                     <Row>
