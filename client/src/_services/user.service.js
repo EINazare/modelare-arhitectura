@@ -52,6 +52,15 @@ function getAllTeachers() {
   return fetch(`${config.apiUrl}/users/teachers`, requestOptions).then(handleResponse);
 }
 
+function getAllStudents() {
+  const requestOptions = {
+    method: "GET",
+    headers: authHeader()
+  };
+
+  return fetch(`${config.apiUrl}/users/students`, requestOptions).then(handleResponse);
+}
+
 function getById(id) {
   const requestOptions = {
     method: "GET",
