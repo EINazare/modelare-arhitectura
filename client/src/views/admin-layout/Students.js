@@ -90,53 +90,53 @@ class Subjects extends React.Component {
                 </Table>
                 <CardBody className="bg-secondary">
                   <Form>
-                  <Row>
-                    <Col md="6">
-                      <FormGroup>
-                        <Input
-                          className="form-control-alternative"
-                          id="input-first-name"
-                          placeholder="First Name"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col md="6">
-                      <FormGroup>
-                        <Input
-                          className="form-control-alternative"
-                          id="input-last-name"
-                          placeholder="Last Name"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col md="6">
-                      <FormGroup>
-                        <Input
-                          className="form-control-alternative"
-                          id="input-email"
-                          placeholder="Email"
-                          type="email"
-                          autoComplete="new-email"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col md="6">
-                      <FormGroup>
-                        <Input
-                          className="form-control-alternative"
-                          id="input-password"
-                          placeholder="Password"
-                          type="password"
-                          autoComplete="new-password"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col md="12">
-                      <Button color="default">Add new student</Button>
-                    </Col>
-                  </Row>
+                    <Row>
+                      <Col md="6">
+                        <FormGroup>
+                          <Input
+                            className="form-control-alternative"
+                            id="input-first-name"
+                            placeholder="First Name"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col md="6">
+                        <FormGroup>
+                          <Input
+                            className="form-control-alternative"
+                            id="input-last-name"
+                            placeholder="Last Name"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col md="6">
+                        <FormGroup>
+                          <Input
+                            className="form-control-alternative"
+                            id="input-email"
+                            placeholder="Email"
+                            type="email"
+                            autoComplete="new-email"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col md="6">
+                        <FormGroup>
+                          <Input
+                            className="form-control-alternative"
+                            id="input-password"
+                            placeholder="Password"
+                            type="password"
+                            autoComplete="new-password"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col md="12">
+                        <Button color="default">Add new student</Button>
+                      </Col>
+                    </Row>
                   </Form>
                 </CardBody>
               </Card>
