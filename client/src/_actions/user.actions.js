@@ -8,6 +8,7 @@ export const userActions = {
   logout,
   register,
   getAll,
+  getAllTeachers,
   delete: _delete
 };
 
@@ -106,6 +107,29 @@ function getAll() {
   }
   function failure(error) {
     return { type: userConstants.GETALL_FAILURE, error };
+  }
+}
+
+function getAllTeachers() {
+  return dispatch => {
+    dispatch(request());
+
+    userService
+      .getAllTeachers()
+      .then(
+        users => dispatch(success(users)),
+        error => dispatch(failure(error.toString()))
+      );
+  };
+
+  function request() {
+    return { type: userConstants.GETALL_TEACHERS_REQUEST };
+  }
+  function success(users) {
+    return { type: userConstants.GETALL_TEACHERS_SUCCESS, users };
+  }
+  function failure(error) {
+    return { type: userConstants.GETALL_TEACHERS_FAILURE, error };
   }
 }
 
