@@ -12,7 +12,7 @@ class RegisterPage extends React.Component {
       user: {
         firstName: "",
         lastName: "",
-        username: "",
+        email: "",
         password: ""
       },
       submitted: false
@@ -38,7 +38,7 @@ class RegisterPage extends React.Component {
 
     this.setState({ submitted: true });
     const { user } = this.state;
-    if (user.firstName && user.lastName && user.username && user.password) {
+    if (user.firstName && user.lastName && user.email && user.password) {
       this.props.register(user);
     }
   }
@@ -86,19 +86,19 @@ class RegisterPage extends React.Component {
           </div>
           <div
             className={
-              "form-group" + (submitted && !user.username ? " has-error" : "")
+              "form-group" + (submitted && !user.email ? " has-error" : "")
             }
           >
-            <label htmlFor="username">Username</label>
+            <label htmlFor="email">Email</label>
             <input
               type="text"
               className="form-control"
-              name="username"
-              value={user.username}
+              name="email"
+              value={user.email}
               onChange={this.handleChange}
             />
-            {submitted && !user.username && (
-              <div className="help-block">Username is required</div>
+            {submitted && !user.email && (
+              <div className="help-block">Email is required</div>
             )}
           </div>
           <div
