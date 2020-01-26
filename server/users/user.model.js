@@ -23,9 +23,9 @@ let user = new User({
 });
 
 user.save(err => {
-  if(err){
-    if (err.code === 11000){}
-    else {
+  if (err) {
+    if (err.code === 11000) {
+    } else {
       throw err;
     }
   }
@@ -40,9 +40,9 @@ user = new User({
 });
 
 user.save(err => {
-  if(err){
-    if (err.code === 11000){}
-    else {
+  if (err) {
+    if (err.code === 11000) {
+    } else {
       throw err;
     }
   }
@@ -57,9 +57,9 @@ user = new User({
 });
 
 user.save(err => {
-  if(err){
-    if (err.code === 11000){}
-    else {
+  if (err) {
+    if (err.code === 11000) {
+    } else {
       throw err;
     }
   }
