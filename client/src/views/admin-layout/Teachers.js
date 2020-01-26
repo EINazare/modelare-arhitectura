@@ -1,21 +1,5 @@
-/*!
-
-=========================================================
-* Argon Dashboard React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
+import { connect } from "react-redux";
 // reactstrap components
 import {
   Button,
@@ -26,14 +10,22 @@ import {
   Container,
   Row,
   Col,
+  Form,
   FormGroup,
   Input
 } from "reactstrap";
 // core components
 import Header from "components/Headers/Header.js";
 
-class Students extends React.Component {
+import { userActions } from "_actions";
+
+class Teachers extends React.Component {
+  componentDidMount() {
+    this.props.getAllTeachers();
+  }
   render() {
+    const { users } = this.props;
+    console.log(users);
     return (
       <>
         <Header />
@@ -86,51 +78,54 @@ class Students extends React.Component {
                   </tbody>
                 </Table>
                 <CardBody className="bg-secondary">
-                  <Row>
-                    <Col md="6">
-                      <FormGroup>
-                        <Input
-                          className="form-control-alternative"
-                          id="input-first-name"
-                          placeholder="First Name"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col md="6">
-                      <FormGroup>
-                        <Input
-                          className="form-control-alternative"
-                          id="input-last-name"
-                          placeholder="Last Name"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col md="6">
-                      <FormGroup>
-                        <Input
-                          className="form-control-alternative"
-                          id="input-email"
-                          placeholder="Email"
-                          type="email"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col md="6">
-                      <FormGroup>
-                        <Input
-                          className="form-control-alternative"
-                          id="input-password"
-                          placeholder="Password"
-                          type="password"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col md="12">
-                      <Button color="default">Add new teacher</Button>
-                    </Col>
-                  </Row>
+                  <Form>
+                    <Row>
+                      <Col md="6">
+                        <FormGroup>
+                          <Input
+                            className="form-control-alternative"
+                            id="input-first-name"
+                            placeholder="First Name"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col md="6">
+                        <FormGroup>
+                          <Input
+                            className="form-control-alternative"
+                            id="input-last-name"
+                            placeholder="Last Name"
+                            type="text"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col md="6">
+                        <FormGroup>
+                          <Input
+                            className="form-control-alternative"
+                            id="input-email"
+                            placeholder="Email"
+                            type="email"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col md="6">
+                        <FormGroup>
+                          <Input
+                            className="form-control-alternative"
+                            id="input-password"
+                            placeholder="Password"
+                            type="password"
+                            autoComplete="new-password"
+                          />
+                        </FormGroup>
+                      </Col>
+                      <Col md="12">
+                        <Button color="default">Add new teacher</Button>
+                      </Col>
+                    </Row>
+                  </Form>
                 </CardBody>
               </Card>
             </Col>
@@ -141,4 +136,17 @@ class Students extends React.Component {
   }
 }
 
-export default Students;
+function mapState(state) {
+  const { users } = state;
+  return { users };
+}
+
+const actionCreators = {
+  getAllTeachers: userActions.getAllTeachers
+};
+
+const connectedTeachers = connect(
+  mapState,
+  actionCreators
+)(Teachers);
+export default connectedTeachers;
