@@ -19,7 +19,7 @@ function authenticate(req, res, next) {
     .then(user =>
       user
         ? res.json(user)
-        : res.status(400).json({ message: "Username or password is incorrect" })
+        : res.status(400).json({ message: "Email or password is incorrect" })
     )
     .catch(err => next(err));
 }
