@@ -4,7 +4,6 @@ import { Route, Redirect, Switch } from "react-router-dom";
 import { Container, Row } from "reactstrap";
 
 // core components
-import AuthNavbar from "components/Navbars/AuthNavbar.js";
 
 import routes from "routes.js";
 
@@ -34,7 +33,6 @@ class Auth extends React.Component {
     return (
       <>
         <div className="main-content">
-          <AuthNavbar />
           <div className="header bg-gradient-info py-7 py-lg-8">
             <Container>
               <div className="header-body text-center mb-7"></div>
