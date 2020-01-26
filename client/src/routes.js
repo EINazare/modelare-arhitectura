@@ -75,7 +75,7 @@ var routes = [
     layout: "/admin"
   },
   {
-    path: "/teacher",
+    path: "/teacher/:id",
     name: "Teacher",
     icon: "ni ni-paper-diploma text-default",
     component: AdminTeacher,
