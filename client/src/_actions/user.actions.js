@@ -18,18 +18,18 @@ function login(email, password) {
     userService.login(email, password).then(
       user => {
         dispatch(success(user));
-        console.log("==============");
-        console.log(user);
-        console.log("==============");
         switch (user.role) {
           case "admin":
             history.push("/admin/teachers");
+            window.location.reload();
             break;
           case "teacher":
             history.push("/teacher/profile");
+            window.location.reload();
             break;
           case "student":
             history.push("/student/profile");
+            window.location.reload();
             break;
           default:
             break;
