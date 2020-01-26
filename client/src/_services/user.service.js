@@ -49,7 +49,9 @@ function getAllTeachers() {
     headers: authHeader()
   };
 
-  return fetch(`${config.apiUrl}/users/teachers`, requestOptions).then(handleResponse);
+  return fetch(`${config.apiUrl}/users/teachers`, requestOptions).then(
+    handleResponse
+  );
 }
 
 function getAllStudents() {
@@ -58,7 +60,9 @@ function getAllStudents() {
     headers: authHeader()
   };
 
-  return fetch(`${config.apiUrl}/users/students`, requestOptions).then(handleResponse);
+  return fetch(`${config.apiUrl}/users/students`, requestOptions).then(
+    handleResponse
+  );
 }
 
 function getById(id) {
