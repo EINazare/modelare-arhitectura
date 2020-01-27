@@ -8,6 +8,7 @@
 |get|`/classes`||`[{"_id":"...","className":"...","noStudents":"...","noTeachers":"...","noSubjects":"..."},...]`**<br/>noStudents is the number of students are part of that class<br/>noTeachers is the number of teachers that teach for that class<br/>noSubjects is the number of subjects that are thought at that class**|
 |post|`/classes`|`{className}`|**Add/insert new class**|
 |get|`/users/teachers/:id`||`{"_id":"...","firstName":"...","lastName":"...","email":"...","teaching":[{"_idTeaching":"...","subjectName":"...","className":"...",},...]}`**<br/>Where teaching is an array of objects of subjects that the teachers is teaching and at which class. The _idTeaching is from the "teaching" table.**|
+|post|`/users/teachers`|`{email, password, firstName, lastName}`|**This is for adding new teacher**|
 |put|`/users/teachers/teaching/:idTeacher`|`{className,subjectName}`|**This is for insterting anew column in the teaching. The teacher with the ID will now teach subjectName at className**|
 |post|`/users/teachers/:idTeacher`|`{firstName,lastName,email,password}`|**Update teacher info**|
 |get|`/users/students/:id`||`{"_id":"...","firstName":"...","lastName":"...","className":"...","email":"...","grades":[{"_idGrade":"...","score":"...","subjectName":"...","dateAdded":"...","dateModified":"..."},...]}`|
