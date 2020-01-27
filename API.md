@@ -7,6 +7,7 @@
 |get|`/classes`||`[{"_id":"...","className":"...","noStudents":"...","noTeachers":"...","noSubjects":"..."},...]`**<br/>noStudents is the number of students are part of that class<br/>noTeachers is the number of teachers that teach for that class<br/>noSubjects is the number of subjects that are thought at that class**|
 |get|`/users/teachers/:id`||`{"_id":"...","firstName":"...","lastName":"...","email":"...","teaching":[{"_idTeaching":"...","subjectName":"...","className":"...",},...]}`**<br/>Where teaching is an array of objects of subjects that the teachers is teaching and at which class. The _idTeaching is from the "teaching" table.**|
 |put|`/users/teachers/teaching/:idTeacher`|`{className,subjectName}`|**This is for insterting anew column in the teaching. The teacher with the ID will now teach subjectName at className**|
+|post|`/users/teachers/:idTeacher`|`{firstName,lastName,email,password}`|**Update teacher info**|
 |get|`/users/students/:id`||`{"_id":"...","firstName":"...","lastName":"...","className":"...","email":"...","grades":[{"_idGrade":"...","score":"...","subjectName":"...","dateAdded":"...","dateModified":"..."},...]}`|
 |post|`/users/students/:id`|`{email, password, firstName, lastName, className}`|**This is for changeing student information**|
 |put|`/users/students/grades/:idStudent`|`{score, subjectName}`|**This is for adding a new grade for a student at a given subject**|
