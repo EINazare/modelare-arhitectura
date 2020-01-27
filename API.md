@@ -12,6 +12,7 @@
 |post|`/users/teachers/:idTeacher`|`{firstName,lastName,email,password}`|**Update teacher info**|
 |get|`/users/students/:id`||`{"_id":"...","firstName":"...","lastName":"...","className":"...","email":"...","grades":[{"_idGrade":"...","score":"...","subjectName":"...","dateAdded":"...","dateModified":"..."},...]}`|
 |post|`/users/students/:id`|`{email, password, firstName, lastName, className}`|**This is for changeing student information**|
+|post|`/users/students`|`{email, password, firstName, lastName}`|**This is for adding new student**|
 |put|`/users/students/grades/:idStudent`|`{score, subjectName}`|**This is for adding a new grade for a student at a given subject**|
 |delete|`/users/students/grades/:idStudent/:idGrade`||**This is for deleting a grade for a student**|
 |post|`/users/students/grades/:idStudent/:idGrade`|`{score}`|**This is for updateting a grade for a student**|
